@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: portal
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://sso.zeropage.org/realms/master
+          jwk-set-uri: https://sso.zeropage.org/realms/master/protocol/openid-connect/certs
+  jpa:
+    open-in-view: false
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+keycloak:
+  issuer-url: https://sso.zeropage.org/realms/master
+  logout-url: https://sso.zeropage.org/realms/master/protocol/openid-connect/logout
+
+server:
+  port: 8081
